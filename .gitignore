@@ -1,3 +1,8 @@
+dist
+fast
+node
+.vscode
+
 # Logs
 logs
 *.log
