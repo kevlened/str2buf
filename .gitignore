@@ -1,6 +1,7 @@
 dist
 fast
 node
+typescript
 .vscode
 
 # Logs

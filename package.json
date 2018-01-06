@@ -5,8 +5,10 @@
   "main": "node/str2buf.js",
   "browser": "dist/str2buf.js",
   "module": "node/str2buf.mjs",
+  "types": "typescript/browser.d.ts",
   "scripts": {
-    "build": "microbundle --entry browser.mjs --output dist && microbundle --entry node.mjs --output node && microbundle --entry browser-fast.mjs --output fast",
+    "build": "microbundle --entry browser.ts --output dist && microbundle --entry node.mjs --output node && microbundle --entry browser-fast.mjs --output fast",
+    "build:types": "tsc --declaration browser.ts --outDir typescript",
     "prepublish": "npm run build",
     "pretest": "npm run build",
     "test": "node test",
@@ -27,10 +29,12 @@
   "files": [
     "dist",
     "fast",
-    "node"
+    "node",
+    "typescript"
   ],
   "homepage": "https://github.com/kevlened/str2buf#readme",
   "devDependencies": {
-    "microbundle": "^0.2.4"
+    "microbundle": "^0.2.4",
+    "typescript": "^2.7.0-dev.20180106"
   }
 }
