@@ -30,7 +30,7 @@ str2buf.fromBuffer(new Uint8Array([104,101,108,108,111]).buffer)
 If you use ES6 imports with a bundler that supports tree-shaking, yes!
 
 ```javascript
-import { fromUint8Array } from 'str2buf/dist/str2buf.mjs'
+import { fromUint8Array } from 'str2buf'
 ```
 
 ## I wanna go fast!
