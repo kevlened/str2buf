@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "isomorphic string <=> buffer in 215 bytes",
   "main": "node/str2buf.js",
-  "browser": "dist/str2buf.js",
   "module": "node/str2buf.mjs",
+  "browser": {
+    "./node/str2buf.js": "./dist/str2buf.js",
+    "./node/str2buf.mjs": "./dist/str2buf.mjs"
+  },
   "scripts": {
     "build": "microbundle --entry browser.mjs --output dist && microbundle --entry node.mjs --output node && microbundle --entry browser-fast.mjs --output fast",
     "prepublish": "npm run build",

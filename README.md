@@ -27,7 +27,7 @@ str2buf.fromBuffer(new Uint8Array([104,101,108,108,111]).buffer)
 
 ## Can it be smaller?
 
-If you use ES6 imports with tree-shaking, yes! The caveat is you have to change how you import until [some issues get sorted out in bundlers](https://github.com/stereobooster/package.json/issues/2).
+If you use ES6 imports with a bundler that supports tree-shaking, yes!
 
 ```javascript
 import { fromUint8Array } from 'str2buf/dist/str2buf.mjs'
