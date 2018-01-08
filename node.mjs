@@ -13,10 +13,3 @@ export function fromBuffer(buffer) {
 export function toBuffer(binaryStr) {
   return toUint8Array(binaryStr).buffer
 }
-
-export default {
-  fromUint8Array,
-  toUint8Array,
-  fromBuffer,
-  toBuffer
-}

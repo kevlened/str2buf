@@ -1,5 +1,5 @@
 # str2buf [![NPM](https://img.shields.io/npm/v/str2buf.svg)](https://npmjs.com/package/str2buf) [![Build](https://travis-ci.org/kevlened/str2buf.svg?branch=master)](https://travis-ci.org/kevlened/str2buf)
-isomorphic string <=> buffer in 215 bytes
+isomorphic string <=> buffer in 183 bytes
 
 ## Install
 
