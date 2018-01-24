@@ -1,6 +1,7 @@
 const assert = require('assert')
 
-const demoSigBuffer = new Uint8Array([11,153,104,103,31,85,244,157,150,178,90,18,11,213,126,1,240,33,90,223,11,24,240,7,87,203,178,39,141,252,200,56])
+const demoSigArray = new Uint8Array([11,153,104,103,31,85,244,157,150,178,90,18,11,213,126,1,240,33,90,223,11,24,240,7,87,203,178,39,141,252,200,56])
+const demoSigBuffer = new Buffer(demoSigArray)
 const demoArray = new Uint8Array([104,101,108,108,111])
 const demoBuffer = new Buffer(demoArray)
 const demoStr = 'hello'
@@ -42,7 +43,7 @@ function run(str2buf, version) {
   assert.ok(ab2buf(str2buf.toBuffer(str2buf.fromBuffer(demoArray.buffer))).equals(demoBuffer),
     'str2buf.toBuffer(str2buf.fromBuffer()) did not transform correctly')
 
-  assert.ok(ab2buf(str2buf.toBuffer(str2buf.fromBuffer(demoSigBuffer))).equals(demoSigBuffer),
+  assert.ok(ab2buf(str2buf.toBuffer(str2buf.fromBuffer(demoSigArray.buffer))).equals(demoSigBuffer),
     'str2buf.toBuffer(str2buf.fromBuffer()) for the signature did not transform correctly')
 
   assert.equal(str2buf.fromBuffer(str2buf.toBuffer(demoStr)), demoStr,
