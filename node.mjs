@@ -1,5 +1,5 @@
 export function fromUint8Array(uint8Array) {
-  return new Buffer(uint8Array, 'binary').toString()
+  return new Buffer(uint8Array).toString('binary')
 }
 
 export function toUint8Array(binaryStr) {
