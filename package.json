@@ -1,6 +1,6 @@
 {
   "name": "str2buf",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "isomorphic string <=> buffer in 183 bytes",
   "main": "node/str2buf.js",
   "module": "node/str2buf.mjs",
