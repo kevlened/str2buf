@@ -1,5 +1,5 @@
 # str2buf [![NPM](https://img.shields.io/npm/v/str2buf.svg)](https://npmjs.com/package/str2buf) [![Build](https://travis-ci.org/kevlened/str2buf.svg?branch=master)](https://travis-ci.org/kevlened/str2buf)
-isomorphic string <=> buffer in 183 bytes
+isomorphic string <=> buffer in 198 bytes
 
 ## Install
 
@@ -33,24 +33,10 @@ If you use ES6 imports with a bundler that supports tree-shaking, yes!
 import { fromUint8Array } from 'str2buf'
 ```
 
-## I wanna go fast!
-
-The Node implementation is just a proxy to Node's `Buffer` object to be as fast as possible. The default browser implementation optimizes for size, so if you're looking for raw speed, import like this:
-
-```javascript
-import str2buf from 'str2buf/fast/str2buf.mjs'
-```
-
 #### Perf profile
 
 ```
 ⏱ browser performance on 1000 arrays or strings of size 25003:
-str2buf.fromUint8Array: 834.135ms
-str2buf.toUint8Array: 771.099ms
-str2buf.fromBuffer: 785.060ms
-str2buf.toBuffer: 590.003ms
-
-⏱ fast browser performance on 1000 arrays or strings of size 25003:
 str2buf.fromUint8Array: 245.842ms
 str2buf.toUint8Array: 165.240ms
 str2buf.fromBuffer: 234.920ms
