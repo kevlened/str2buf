@@ -90,5 +90,4 @@ function run(str2buf, version) {
 }
 
 run(require('./dist/str2buf.js'), 'browser')
-run(require('./fast/str2buf.js'), 'fast browser')
 run(require('.'), 'node')
